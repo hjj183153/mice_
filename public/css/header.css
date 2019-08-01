@@ -109,3 +109,7 @@ html,body{
 .dropdown-menu>li>a:hover{
     text-decoration: none;
 }
+/* 轮播图 */
+.swiper-slide>img{
+    width:100%;
+}
