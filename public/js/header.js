@@ -15,20 +15,25 @@ var mySwiper=new Swiper('.swiper-container',{
   scrollbar: {
     el: '.swiper-scrollbar',
   },
-  //设置自动切换
+  //设置自动切换            
   autoplay:{
     delay:4000,
   },
 })
 //设置下拉菜单一次只能显示一个
-var $nav_ul=$('.navbar-nav.col-md-7.co-lg-7.nav-left');
-console.log($nav_ul);
-$nav_ul.click(function(){
-  console.log(111);
-  var $nav_li=$('.nav-item');
-  console.log($nav_li);
-  //$nav_li.attr('aria-expanded')=false;
-  console.log(this.index);
-  // if($nav_li){}
-  //只能允许有一个li的aria-expanded为true
+var $nav_link=$('.nav-link[aria-expanded]');
+var $drop_menu=$('ul.dropdown-menu');
+$nav_link.click(function(){
+  console.log($(this).next("ul.dropdown-menu").css("display"));
+  
+  if($(this).next("ul.dropdown-menu").css("display")=="block"){//如果显示
+    $(this).next("ul.dropdown-menu").css("display","none");
+  }else{//如果隐藏
+    $(this).next("ul.dropdown-menu").addClass("selected");
+    //console.log($("ul.dropdown-menu:not(.selected)"));
+    $("ul.dropdown-menu:not(.selected)").css("display","none");
+    $(this).next("ul.dropdown-menu").css("display","block").removeClass("selected");
+    //$(this).next("ul.dropdown-menu")
+  }
+  
 })

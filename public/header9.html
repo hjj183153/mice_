@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/header9.css">
+    
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="http://fair.mofcom.gov.cn:80/js/bootstrap.js"></script>
+</head>
+<body>
+<!-- 使用bootstrap，所有代码都放在container类的div中 -->
+  <nav class="nav navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="container-fluid">
+        <div class="navbar navbar-expand-md  navbar-dark ">
+          <!-- 2.在小屏幕下出现的按钮，按钮上有三条线，折叠的激发按钮 -->
+          <button type="button" class="navbar-toggle visibal-left-sm" data-toggle="collapse" data-target="#content" style="float:left">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          </button>
+          <!-- !!!!注意：折叠下拉还存在问题，如何解决点击按钮，高度先>所设置的最大高度，然后才回缩，设置的padding:10px 15px会产生跳动 -->
+          <!-- <button class="navbar-toggler visibal-left-sm" data-toggle="collapse" data-target="#content">
+            <span class="navbar-toggler-icon"></span>
+          </button> -->
+          <!-- 1.最前面不隐藏的菜单项 -->
+          <div class="navbar-brand nav-logo visibal-left-sm">
+              <img src="img/nav-logo.png">
+          </div>
+          <!-- 中屏隐藏 -->
+          <div class="navbar-brand hidden-md visibal-left-sm">环球会展网</div> 
+          <!-- 3.导航栏里的菜单项，小屏幕以上横向，小屏幕一下纵向显示 -->
+          <!-- 4.折叠的内容 -->
+          <!-- 添加一个空div，控制小屏换行-->
+          <div class="wrap-row"></div>
+          <div id="content" class="collapse navbar-collapse">
+            <ul class="navbar-nav nav-left">
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link">首页</a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link">新闻</a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
+                "collapse" data-target="#list-up3" aria-expanded="false" >展会
+                  <span class="caret" style="color:#fff;"></span>
+                </a>
+                <ul class="dropdown-menu list-up3" id="list-up3">
+                  <li>
+                    <a href="javascript:;">商务部展会</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">参展直通展会</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">境内展会</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">境外展会</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
+                "collapse" data-target="#list-up4" aria-expanded="false" >机构
+                  <span class="caret" style="color:#fff;"></span>
+                </a>
+                <ul class="dropdown-menu list-up4" id="list-up4">
+                  <li>
+                    <a href="javascript:;">公司</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">协会</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">商会</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
+                "collapse" data-target="#list-up5" aria-expanded="false" >展馆
+                  <span class="caret" style="color:#fff;"></span>
+                </a>
+                <ul class="dropdown-menu list-up5" id="list-up5">
+                  <li>
+                    <a href="javascript:;">境内展馆</a>
+                  </li>
+                  <li>
+                    <a href="javascript:;">境外展馆</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
+                "collapse" data-target="#list-up6" aria-expanded="false" >服务
+                  <span class="caret" style="color:#fff;"></span>
+                </a>
+                <ul class="dropdown-menu list-up6" id="list-up6">
+                  <li>
+                    <a href="javascript:;">媒体推广</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">展台设计搭建</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">公关礼仪</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">展品运输</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">资料设计印刷</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">翻译服务</a>
+                  </li>
+                  <li>
+                      <a href="javascript:;">各国概况</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="navbar-nav  nav-right">
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link">搜索</a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link">登录</a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link">注册</a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link">EN</a>
+              </li>
+              <li class="nav-item">
+                <a href="javascript:;" class="nav-link">返回总站</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- 轮播图 -->
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="img/carousel/banner-pic_1.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/carousel/banner-pic_2.png" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/carousel/banner-pic_3.png" alt="">
+      </div>
+    </div>
+    <!-- 如果需要分页器 -->
+    <div class="swiper-pagination"></div>
+    <!-- 添加导航按钮 -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+    <!-- 添加滚动条 -->
+    <div class="swiper-scrollbar"></div>
+  </div>
+  <!-- 1F展会 -->
+  <div class="mar-tb-40">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 exh-title">
+          <h3>展会</h3>
+        </div>
+        <div class="col-sm-8 exh-title">
+          <ul class="nav nav-tabs navbar-right">
+            <li class="active">
+              <a href="javascript:;">最新展会</a>
+            </li>
+            <li>
+              <a href="javascript:;">商务部展会</a>
+            </li>
+            <li>
+              <a href="javascript:;">参展直通</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tab-container mar-top-20">
+        <!-- 最新展会 -->
+        <div class="tab-pane fade active in">
+          <div class="row">
+            <!-- 左侧图片 -->
+            <div class="col-sm-6 col-md-4 hidden-xs">
+              <div class="mar-top-20"><img class="img-active" src="img/exhibition/home-exh-1pic_1.png" alt=""></div>
+              <div class="mar-tb-10"><img class="img-active" src="img/exhibition/home-exh-1pic_2.png" alt=""></div>
+            </div>
+            <!-- 右侧文字 -->
+            <div class="col-sm-6 col-md-8">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          2020中国（北京）国际智慧工地装备展览会
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        建筑/建材/建筑展
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg" >
+                      <p class="list-group-item-text">
+                        当前，建筑施工行业的信息化发展正不断加快步伐，随着科技应用的日新月异，工地智慧化将是行业发展的必...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          2020中国（北京）国际大数据产业博览会
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        计算机与IT技术
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        前言以云计算、大数据、高速宽带、物联网、智慧城市为代表的ICT新浪潮，进一步推动了数据中心市场规...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          2020亚洲（北京）国际智慧新零售暨无人售货展览会
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        咨询/投资/加盟
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        随着人工智能技术的驱动与渗透,消费升级的加速与新零售的问世叠加,无论是无人便利店、智能售货机还是...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          2020第十一届北京智慧城市技术与应用产品展览会
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        其他行业
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        北京作为首都，是向全世界展示中国形象的首要窗口，建设和管理好首都是国家治理体系和治理能力现代化的...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          2020第十四届亚洲（北京）国际物联网展览会
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        计算机与IT技术
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        前言“2020亚洲国际物联网展览会”本次大会主要围绕物联网、大数据、人工...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          2020第十届（北京）国际电子支付技术与设备展览会
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        金融/保险/审计
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        中国人民银行金融消费权益保护局发布了《2017年中国普惠金融指标分析报告》。《报告》显示，我国基...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          2020第十二届（北京）国际智能家居展览会  
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        家居/家电/家具
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        同期举办：2020智能锁展览会发展前景全球智能家居发展前景趋势正在以倍增的速度增长，智能家居市场...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- 商务部展会 -->
+        <div class="tab-pane fade"></div>
+        <!-- 参展直通 -->
+        <div class="tab-pane fade"></div>
+      </div>
+      <div class="more clearfix text-right mar-top-10">
+        <a href="javascript:;">更多</a>
+      </div>
+    </div>
+  </div>
+  <!-- 2F展会资讯 -->
+  <div class="mar-tb-40 background-color-gray">
+    <div class="container">
+      <div>
+        <h3 class="exh-title">展会资讯</h3>
+      </div>
+      <div class="tab-container mar-top-20">
+        <!-- 最新展会 -->
+        <div class="tab-pane fade active in">
+          <div class="row">
+            <!-- 左侧文字 -->
+            <div class="col-sm-6 col-md-8">
+              <ul class="list-group">
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          纪念周恩来总理珍品展在武汉开幕
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        2019-1-9
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg" >
+                      <p class="list-group-item-text">
+                        中新社武汉1月8日电在周恩来总理逝世43周年纪念日之际，一场以“他吸引了全世界的目光”为主题的“纪念...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          “古埃及人的生命观”展览在秦始皇帝陵博物院开幕
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        2018-12-25
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        中新社西安12月20日电(记者张远)“不朽之旅――古埃及人的生命观”展览20日在秦始皇帝陵博物院开幕...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          山东新旧动能转换重大项目发布会10月举行
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        2019-8-6
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        本报8月4日讯记者在山东省政府新闻办公室举行的发布会上获悉，2019新动能·青岛展览洽谈会将于10月...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          2019北京夏季珠宝展精彩开幕
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        2019-8-6
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        8月2日，2019北京夏季珠宝展在北京中国国际展览中心开幕。此次珠宝展展览面积近10000平米，展位...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          第十届中国宜兴国际陶瓷文化艺术节将于10月举行
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        2019-8-6
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        人民网北京8月5日电据悉，第十届中国宜兴国际陶瓷文化艺术节将于10月18日举行。宜兴是享誉中外的“中...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          新疆民族传统服饰文化巡展在乌鲁木齐开展
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        2019-8-6
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        8月2日上午，“霓裳艺彩耀动天山”新疆民族传统服饰文化巡展在乌鲁木齐市开展。此次巡展是由新疆民间文艺...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="list-group-item">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                      <div class="exh-news-title retract">
+                        <a href="javascript:;">
+                          第七届中国国际口岸贸易博览会8日启幕
+                        </a>
+                      </div>
+                      <p class="list-group-item-text">
+                        2019-8-6
+                      </p>
+                    </div>
+                    <div class="col-md-6 visible-md visible-lg">
+                      <p class="list-group-item-text">
+                        央广网哈尔滨8月5日消息第七届中国国际口岸贸易博览会将于2019年8月8日在黑龙江省绥芬河市举行，这...
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <!-- 右侧图片 -->
+            <div class="col-sm-6 col-md-4 hidden-xs">
+              <div class="mar-top-20"><img class="img-active" src="img/exhibition/home-exh-1pic_3.png" alt=""></div>
+              <div class="mar-tb-10"><img class="img-active" src="img/exhibition/home-exh-1pic_4.png" alt=""></div>
+            </div>
+          </div>
+        </div>
+        <!-- 商务部展会 -->
+        <div class="tab-pane fade"></div>
+        <!-- 参展直通 -->
+        <div class="tab-pane fade"></div>
+      </div>
+      <div class="more clearfix text-right mar-top-10 padding-bom-40">
+        <a href="javascript:;">更多</a>
+      </div>
+    </div>
+  </div>
+  <!-- 3F展馆 -->
+  <div class="margin-tb-40">
+    <div class="container">
+      <div class="blo-title padding-top-20">
+        <h3 class="exh-title">展馆</h3>
+      </div>
+      <div class="row padding-top-20">
+        <div class="col-sm-6 hidden-xs">
+          <img src="img/exhibition/home-exh-1pic_6.png" alt="">
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <ul class="list-group">
+            <li class="list-group-item retract clearfix exhhall-title">
+              <a href="javascript:;">
+                海宁中国家纺城
+              </a>
+            </li>
+            <li class="list-group-item retract clearfix exhhall-title">
+              <a href="javascript:;">
+                青岛世界博览城
+              </a>
+            </li>
+            <li class="list-group-item retract clearfix exhhall-title">
+              <a href="javascript:;">
+                山东.潍坊国际展览中心
+              </a>
+            </li>
+            <li class="list-group-item retract clearfix exhhall-title">
+              <a href="javascript:;">
+                广东珠西国际会展中心
+              </a>
+            </li>
+            <li class="list-group-item retract clearfix exhhall-title">
+              <a href="javascript:;">
+                广州（潭州）国际会展中心
+              </a>
+            </li>
+            <li class="list-group-item retract clearfix exhhall-title">
+              <a href="javascript:;">
+                临沂国际博览中心
+              </a>
+            </li>
+            <li class="list-group-item retract clearfix exhhall-title">
+              <a href="javascript:;">
+                浙江新农都会展中心  
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="more clearfix text-right mar-top-10 padding-bom-40">
+        <a href="javascript:;">更多</a>
+      </div>
+    </div>
+  </div>
+
+
+ <script src="js/swiper.min.js"></script>
+ <script src="js/header.js"></script>
+</body>
+
+</html>

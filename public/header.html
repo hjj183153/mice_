@@ -34,35 +34,38 @@
         <!-- 3.导航栏里的菜单项，小屏幕以上横向，小屏幕一下纵向显示 -->
         <!-- 4.折叠的内容 -->
         <div id="content" class="collapse navbar-collapse">
-          <ul class="navbar-nav  col-md-7 co-lg-7 nav-left">
-            <li class="nav-item">
-              <a href="javascript:;" class="nav-link">首页</a>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:;" class="nav-link">新闻</a>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
-              "collapse" data-target="#list-up3">展会</a>
+          <div class="btn-group btn-nav-left" role="group" aria-label="...">
+            <button type="button" class="btn button3">
+              <a href="javascript:;" >首页</a>
+            </button>
+            <button type="button" class="btn btn-default button3">
+              <a href="javascript:;">新闻</a>
+            </button>
+            <!-- 带有下拉菜单的按钮组 -->
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default dropdown-toggl button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="javascript:;" >展会</a>
+              </button>
               <ul class="dropdown-menu list-up3" id="list-up3">
                 <li>
-                    <a href="javascript:;">商务部展会</a>
+                  <a href="javascript:;">商务部展会</a>
                 </li>
                 <li>
-                    <a href="javascript:;">参展直通展会</a>
+                  <a href="javascript:;">参展直通展会</a>
                 </li>
                 <li>
-                    <a href="javascript:;">境内展会</a>
+                  <a href="javascript:;">境内展会</a>
                 </li>
                 <li>
-                    <a href="javascript:;">境外展会</a>
+                  <a href="javascript:;">境外展会</a>
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
-              "collapse" data-target="#list-up4">机构</a>
-              <ul class="dropdown-menu list-up4" id="list-up4">
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default  dropdown-toggle button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="javascript:;">机构</a>
+              </button>
+              <ul class="dropdown-menu list-up3" id="list-up3">
                 <li>
                     <a href="javascript:;">公司</a>
                 </li>
@@ -73,11 +76,12 @@
                     <a href="javascript:;">商会</a>
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
-              "collapse" data-target="#list-up5">展馆</a>
-              <ul class="dropdown-menu list-up5" id="list-up5">
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default  dropdown-toggle button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="javascript:;" >展馆</a>
+              </button>
+              <ul class="dropdown-menu list-up3" id="list-up3">
                 <li>
                     <a href="javascript:;">境内展馆</a>
                 </li>
@@ -85,11 +89,12 @@
                     <a href="javascript:;">境外展馆</a>
                 </li>
               </ul>
-            </li>
-            <li class="nav-item">
-              <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
-              "collapse" data-target="#list-up6">服务</a>
-              <ul class="dropdown-menu list-up6" id="list-up6">
+            </div>
+            <div class="btn-group" role="group">
+              <button type="button" class="btn btn-default  dropdown-toggle button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a href="javascript:;">服务</a>
+              </button>
+              <ul class="dropdown-menu list-up3" id="list-up3">
                 <li>
                     <a href="javascript:;">媒体推广</a>
                 </li>
@@ -112,8 +117,45 @@
                     <a href="javascript:;">各国概况</a>
                 </li>
               </ul>
+            </div>
+          </div>
+
+
+
+          <!-- <ul class="navbar-nav  col-md-7 co-lg-7 nav-left">
+            <li class="nav-item">
+              
             </li>
-          </ul>
+            <li class="nav-item">
+             
+            </li>
+            <li class="nav-item">
+              <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
+              "collapse" data-target="#list-up3">展会</a>
+              
+            </li>
+            <li class="nav-item">
+              <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
+              "collapse" data-target="#list-up4">机构</a>
+              <ul class="dropdown-menu list-up4" id="list-up4">
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
+              "collapse" data-target="#list-up5">展馆</a>
+              <ul class="dropdown-menu list-up5" id="list-up5">
+                
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:;" class="nav-link dropdown-toggle" data-toggle=
+              "collapse" data-target="#list-up6">服务</a>
+              <ul class="dropdown-menu list-up6" id="list-up6">
+
+              </ul>
+            </li>
+          </ul> -->
           <ul class="navbar-nav col-md-6 co-lg-5 nav-right">
             <li class="nav-item">
               <a href="javascript:;" class="nav-link">搜索</a>
